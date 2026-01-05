@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace IDP.Api.Controllers.V1
 {
+    [Route("api/v1/[controller]")]
+    [ApiController]
     public class UserController : IBaseController
     {
         private readonly IMediator _mediator;
@@ -16,11 +18,11 @@ namespace IDP.Api.Controllers.V1
         /// افزودن کاربر
         /// </summary>
         /// <returns></returns>
-        [HttpPost]
+        [HttpPost("Insert")]
         public async Task<IActionResult> Insert([FromBody] UserCommand userCommand)
         {
             var res = await _mediator.Send(userCommand);
-            return View();
+            return Ok();
         }
     }
 }
