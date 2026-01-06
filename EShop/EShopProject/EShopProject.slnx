@@ -1,6 +1,8 @@
 <Solution>
   <Folder Name="/Src/" />
-  <Folder Name="/Src/Common/" />
+  <Folder Name="/Src/Common/">
+    <Project Path="Src/Common/Auth/Auth.csproj" Id="b6a83948-2e69-48ab-b983-fb84ee00aed3" />
+  </Folder>
   <Folder Name="/Src/Services/" />
   <Folder Name="/Src/Services/BasketService/" />
   <Folder Name="/Src/Services/CatalogService/" />
