@@ -6,10 +6,11 @@ using System.Text;
 
 namespace IDP.Application.Command.User
 {
-    public class UserCommand : IRequest<bool>
+    public record UserCommand : IRequest<bool>
     {
         [Required(ErrorMessage = "نام الزامی است")]
         [MinLength(5)]
-        public required string Name { get; set; }
+        public required string FulleName { get; set; }
+        public required string NationalCode { get; set; }
     }
 }
